@@ -67,3 +67,5 @@ The goal is to integrate an intuitive frontend with a powerful backend, incorpor
 - 🚀 Deployment to Vercel (frontend) and Render (backend)
 - 📄 Final documentation
 
+
+Frontend Deployment Link - https://funny-pastelito-055194.netlify.app/
