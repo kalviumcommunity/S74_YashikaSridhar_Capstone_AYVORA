@@ -68,4 +68,6 @@ The goal is to integrate an intuitive frontend with a powerful backend, incorpor
 - 📄 Final documentation
 
 
+
 Frontend Deployment Link - https://funny-pastelito-055194.netlify.app/
+
