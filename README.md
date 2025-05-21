@@ -71,3 +71,5 @@ The goal is to integrate an intuitive frontend with a powerful backend, incorpor
 
 Frontend Deployment Link - https://funny-pastelito-055194.netlify.app/
 
+Backend Deployment Link - https://s74-yashikasridhar-capstone-ayvora.onrender.com
+
