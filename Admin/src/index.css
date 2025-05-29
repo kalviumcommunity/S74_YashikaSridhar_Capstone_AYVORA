@@ -4,7 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Outfit;
+  font-family: outfit;
 }
 
 body{
@@ -18,9 +18,9 @@ a{
 }
 
 hr{
-   border: none;
-   height: 1px;
-   background-color: #a9a9a9;
+  border: none;
+  height: 1px;
+  background-color: #a9a9a9;
 }
 
 .app-content{
