@@ -4,16 +4,9 @@
     align-items: center;
     padding: 8px 4%;
 }
-.logo {
-    height: 150px; 
-    width: auto;
-}
-
 .navbar .logo{
     width: max(20%,80px);
 }
-
 .navbar .profile{
     width: 40px;
 }
-  
