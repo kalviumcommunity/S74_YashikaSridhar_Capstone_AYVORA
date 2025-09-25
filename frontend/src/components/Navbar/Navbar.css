@@ -1,59 +1,128 @@
+/* Navbar container */
 .navbar {
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.navbar .logo {
+  width: 150px;
+}
+
+/* Navbar menu (links) */
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  color: #49557e;
+  font-size: 18px;
+}
+
+.navbar li {
+  cursor: pointer;
+}
+
+.navbar .active {
+  padding-bottom: 2px;
+  border-bottom: 2px solid #49557e;
+}
+
+/* Right-side icons and button */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Button styles */
+.navbar button {
+  background: transparent;
+  font-size: 16px;
+  color: #49557e;
+  border: 1px solid tomato;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navbar button:hover {
+  background-color: tomato;
+  color: white;
+  border-color: tomato;
+}
+
+/* Search icon dot */
+.navbar-search-icon {
+  position: relative;
+}
+
+.navbar-search-icon .dot {
+  position: absolute;
+  min-width: 10px;
+  min-height: 10px;
+  background-color: tomato;
+  border-radius: 50%;
+  top: -8px;
+  right: -8px;
+}
+
+/* Profile dropdown */
+.navbar-profile {
+  position: relative;
+}
+
+.nav-profile-dropdown {
+  position: absolute;
+  display: none;
+  top: 100%;
+  right: 0;
+  margin-top: 10px;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fff2ef;
+  padding: 12px 25px;
+  border-radius: 4px;
+  border: 1px solid tomato;
+  list-style: none;
+  z-index: 10;
+}
+
+.navbar-profile:hover .nav-profile-dropdown {
+  display: flex;
+}
+
+.nav-profile-dropdown li {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-profile-dropdown img {
+  width: 20px;
+}
+
+.nav-profile-dropdown li:hover {
+  color: tomato;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1050px) {
   .navbar .logo {
-    width: 150px;
+    width: 140px;
   }
-  
+
   .navbar-menu {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    color: #49557e;
-    font-size: 18px;
-  }
-  
-  .navbar-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  .navbar button {
-    background: transparent;
+    gap: 15px;
     font-size: 16px;
-    color: #49557e;
-    border: 1px solid tomato;
-    padding: 10px 20px;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: 0.3s;
   }
-  
-  .navbar button:hover {
-    background-color: #fff4f2 !important;
+
+  .navbar button {
+    padding: 8px 16px;
+    font-size: 14px;
   }
-  .navbar .active{
-    padding-bottom: 2px;
-    border-bottom: 2px solid #49557e;
-  }
-  .navbar li{
-    cursor: pointer;
-  }
-  .navbar-search-icon{
-    position: relative;
-  }
-  .navbar-search-icon .dot{
-    position: absolute;
-    min-width: 10px;
-    min-height: 10px;
-    background-color: tomato;
-    border-radius: 5px;
-    top: -8px;
-    right: -8px;
-  }
+}
