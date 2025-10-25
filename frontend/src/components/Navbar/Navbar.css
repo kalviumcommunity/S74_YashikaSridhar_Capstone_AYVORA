@@ -1,4 +1,6 @@
-/* Navbar container */
+/* ============================
+   NAVBAR STYLES
+============================ */
 .navbar {
   padding: 20px;
   display: flex;
@@ -12,7 +14,7 @@
   width: 150px;
 }
 
-/* Navbar menu (links) */
+/* Navbar Menu */
 .navbar-menu {
   display: flex;
   list-style: none;
@@ -21,23 +23,30 @@
   font-size: 18px;
 }
 
-.navbar li {
+.navbar-menu a {
+  text-decoration: none;
+  color: #49557e;
   cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.navbar-menu a:hover {
+  color: tomato;
 }
 
 .navbar .active {
-  padding-bottom: 2px;
   border-bottom: 2px solid #49557e;
+  padding-bottom: 2px;
 }
 
-/* Right-side icons and button */
+/* Right Section */
 .navbar-right {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-/* Button styles */
+/* Button */
 .navbar button {
   background: transparent;
   font-size: 16px;
@@ -46,16 +55,15 @@
   padding: 10px 20px;
   border-radius: 50px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s;
 }
 
 .navbar button:hover {
   background-color: tomato;
   color: white;
-  border-color: tomato;
 }
 
-/* Search icon dot */
+/* Search icon with notification dot */
 .navbar-search-icon {
   position: relative;
 }
@@ -70,47 +78,74 @@
   right: -8px;
 }
 
-/* Profile dropdown */
+/* ============================
+   PROFILE DROPDOWN
+============================ */
 .navbar-profile {
   position: relative;
+  cursor: pointer;
 }
 
-.nav-profile-dropdown {
+/* Dropdown hidden by default */
+.profile-dropdown {
   position: absolute;
-  display: none;
-  top: 100%;
+  top: 110%;
   right: 0;
-  margin-top: 10px;
-  flex-direction: column;
-  gap: 10px;
-  background-color: #fff2ef;
-  padding: 12px 25px;
-  border-radius: 4px;
-  border: 1px solid tomato;
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
   list-style: none;
-  z-index: 10;
+  width: 160px;
+  padding: 8px 0;
+  display: none;
+  flex-direction: column;
+  z-index: 20;
+  animation: dropdownFade 0.2s ease;
 }
 
-.navbar-profile:hover .nav-profile-dropdown {
+/* Show dropdown only when hovered */
+.navbar-profile:hover .profile-dropdown {
   display: flex;
 }
 
-.nav-profile-dropdown li {
-  cursor: pointer;
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-dropdown li {
   display: flex;
   align-items: center;
   gap: 10px;
+  padding: 10px 16px;
+  font-size: 15px;
+  color: #49557e;
+  transition: background 0.3s, color 0.3s;
 }
 
-.nav-profile-dropdown img {
-  width: 20px;
-}
-
-.nav-profile-dropdown li:hover {
+.profile-dropdown li:hover {
+  background-color: #fff2ef;
   color: tomato;
 }
 
-/* Responsive adjustments */
+.profile-dropdown hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 4px 0;
+}
+
+.profile-dropdown img {
+  width: 18px;
+}
+
+/* Responsive */
 @media (max-width: 1050px) {
   .navbar .logo {
     width: 140px;
