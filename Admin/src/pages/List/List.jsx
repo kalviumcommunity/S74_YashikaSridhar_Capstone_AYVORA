@@ -1,12 +1,10 @@
-import React from 'react'
-import './List.css'
+import React from "react";
 
-const List = () => {
+export default function List() {
   return (
-    <div>
-      List
+    <div style={{ padding: "20px" }}>
+      <h2>🍕 Food List Page</h2>
+      <p>This page is working correctly ✅</p>
     </div>
-  )
+  );
 }
-
-export default List

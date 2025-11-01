@@ -9,6 +9,7 @@ const Navbar = ({ setShowLogin }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const { getTotalCartAmount, token, setToken } = useContext(StoreContext);
 
+  // ✅ Logout handler
   const handleLogout = () => {
     setToken("");
     localStorage.removeItem("token");
@@ -42,7 +43,7 @@ const Navbar = ({ setShowLogin }) => {
           <div className={getTotalCartAmount() ? "dot" : ""}></div>
         </div>
 
-        {/* Conditional Login/Profile */}
+        {/* ✅ Conditional rendering based on login */}
         {!token ? (
           <button className="sign-in-button" onClick={() => setShowLogin(true)}>
             Sign In

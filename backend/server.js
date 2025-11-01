@@ -1,29 +1,43 @@
 import express from "express";
 import cors from "cors";
-import { connectDB } from "./config/db.js";
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+
 import foodRouter from "./routes/foodRoute.js";
-import userRouter from "./routes/userRoute.js"; // ✅ added
+import userRouter from "./routes/userRoute.js";
+import { connectDB } from "./config/db.js";
 
-// app config
+// Load environment variables
+dotenv.config();
+
 const app = express();
-const port = 4000;
 
-// middleware
+// ✅ Middleware
 app.use(express.json());
 app.use(cors());
+app.use("/uploads", express.static("uploads")); // serves uploaded images
 
-// db connection
-connectDB();
+// ✅ Mount routes
+app.use("/api/foods", foodRouter);
+app.use("/api/user", userRouter); // important for /register & /login
 
-// api endpoints
-app.use("/api/food", foodRouter);
-app.use("/api/user", userRouter); // ✅ added for signup/login
-app.use("/images", express.static("uploads"));
-
+// ✅ Default route
 app.get("/", (req, res) => {
-  res.send("API Working ✅");
+  res.send("Server is running 🚀");
 });
 
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
-});
+// ✅ Start server only after MongoDB connects
+const startServer = async () => {
+  try {
+    await connectDB(); // Connect to MongoDB
+    const PORT = process.env.PORT || 4000;
+    app.listen(PORT, () =>
+      console.log(`✅ Server running on port ${PORT} and connected to MongoDB`)
+    );
+  } catch (error) {
+    console.error("❌ Failed to connect to MongoDB:", error.message);
+    process.exit(1);
+  }
+};
+
+startServer();
