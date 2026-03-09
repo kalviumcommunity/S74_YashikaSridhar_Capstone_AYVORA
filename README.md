@@ -1,4 +1,5 @@
 # AYVORA 🍽️ - Capstone Project
+A full-stack food delivery web application built using React, Node.js, Express, and MongoDB with features like authentication, cart management, and real-time order tracking.
 
 ## 💡 Project Idea Brief
 **AYVORA** is a modern food delivery application designed to offer a seamless and user-friendly experience for ordering food from various restaurants. This full-stack web app ensures a smooth journey from exploring menus to real-time order tracking and secure checkout.
@@ -69,7 +70,39 @@ The goal is to integrate an intuitive frontend with a powerful backend, incorpor
 
 
 
-Frontend Deployment Link - https://funny-pastelito-055194.netlify.app/
+## 🚀 Live Deployment
 
-Backend Deployment Link - https://s74-yashikasridhar-capstone-ayvora.onrender.com
+Frontend: https://funny-pastelito-055194.netlify.app/  
 
+Backend: https://s74-yashikasridhar-capstone-ayvora.onrender.com
+
+
+## ⚙️ Running the Project Locally
+
+Follow these steps to run AYVORA on your local machine.
+
+1️⃣ Clone the Repository
+
+git clone https://github.com/kalviumcommunity/S74_YashikaSridhar_Capstone_AYVORA.git
+
+2️⃣ Navigate to the Project Folder
+
+cd S74_YashikaSridhar_Capstone_AYVORA
+
+3️⃣ Install Dependencies
+
+Frontend:
+cd frontend
+npm install
+
+Backend:
+cd backend
+npm install
+
+4️⃣ Start the Application
+
+Start Backend Server:
+npm start
+
+Start Frontend:
+npm run dev
